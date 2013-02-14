@@ -2298,6 +2298,8 @@ end
 say_wizard "Running 'after bundler' callbacks."
 require 'bundler/setup'
 if prefer :templates, 'haml'
+  puts "\n\nRVM info stuff #{run rvm info}\n"
+  puts "Gems are #{gem list}\n\n\n"
   say_wizard "importing html2haml conversion tool"
   require 'haml/html'
 end
